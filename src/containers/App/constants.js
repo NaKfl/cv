@@ -16,3 +16,11 @@ export const PARTICLES_PARAM = {
     },
   },
 };
+
+export const MENU_ITEM = {
+  ABOUT: 1,
+  RESUME: 2,
+  WORKS: 3,
+  BLOGS: 4,
+  CONTACT: 5,
+};
