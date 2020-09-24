@@ -1,0 +1,27 @@
+.profile {
+  background-color: yellow;
+
+  &__avatar {
+    background-image: url('./../../assets/avatar.jpg');
+    background-position: center center;
+    background-size: cover;
+    width: 480px;
+    height: 330px;
+  }
+
+  &__info {
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__single {
+      width: 50%;
+      height: 70px;
+    }
+  }
+}

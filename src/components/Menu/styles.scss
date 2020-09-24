@@ -1,0 +1,16 @@
+.menu {
+  background: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    padding: 13px 3px;
+    cursor: pointer;
+  }
+}
