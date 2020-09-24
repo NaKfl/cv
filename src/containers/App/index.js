@@ -29,7 +29,7 @@ class App extends Component {
       <section className='app'>
         <section className='app__container'>
           <div className='app__container__items'>
-            <button onClick={() => this.changeColor(colors)}>Click</button>
+            {/* <button onClick={() => this.changeColor(colors)}>Click</button> */}
             <Menu />
             <Profile />
             <div className='app__container__items__cards'>

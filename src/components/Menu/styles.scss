@@ -1,5 +1,8 @@
 .menu {
-  background: red;
+  background: white;
+  border-radius: 4px;
+  color: #323232;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,8 +12,46 @@
     margin: 0;
     padding: 0;
   }
+
   &__item {
-    padding: 13px 3px;
+    padding: 18px 9px 13px 9px;
     cursor: pointer;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    i {
+      display: block;
+      width: 40px;
+      height: 25px;
+      font-size: 17px;
+      text-align: center;
+    }
+
+    &:before {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: radial-gradient(
+        ellipse at right,
+        #dddddd 0%,
+        rgba(255, 255, 255, 0) 70%
+      );
+    }
+
+    &:hover {
+      color: rgb(8, 86, 193);
+    }
   }
 }

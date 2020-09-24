@@ -5,7 +5,7 @@
   background: linear-gradient(to bottom right, #48b1bf 0%, #0856c1 100%);
 
   &__background {
-    // display: none;
+    display: none;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -58,14 +58,5 @@
   .disappear {
     opacity: 0%;
     visibility: hidden;
-  }
-}
-
-@-prefix-keyframes slide {
-  from {
-    height: 0;
-  }
-  to {
-    height: 300px;
   }
 }
