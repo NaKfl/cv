@@ -7,7 +7,7 @@ export default class Menu extends Component {
       <div>
         <section className='menu'>
           <ul>
-            <li className='menu__item'>
+            <li className='menu__item menu__active'>
               <i class='fa fa-user'></i>
               <span>ABOUT</span>
             </li>
