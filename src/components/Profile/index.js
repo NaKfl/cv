@@ -33,7 +33,7 @@ class index extends Component {
           <section className='profile__buttons'>
             <button className='profile__buttons__single profile__buttons__single--before'>
               <span>DOWNLOAD CV</span>
-              <i class='fa fa-file-download'></i>
+              <i class='fa fa-download'></i>
             </button>
             <button className='profile__buttons__single'>
               <span>CONTACT ME</span>

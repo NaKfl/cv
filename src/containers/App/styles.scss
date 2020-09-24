@@ -7,7 +7,7 @@
   background: linear-gradient(to bottom right, #48b1bf 0%, #0856c1 100%);
 
   &__background {
-    display: none;
+    // display: none;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -28,6 +28,14 @@
     &__items {
       display: flex;
       height: 674px;
+
+      &__menu {
+        margin-right: 8px;
+        transform: translateY(15px);
+      }
+
+      &__profile {
+      }
 
       &__cards {
         position: relative;

@@ -30,8 +30,10 @@ class App extends Component {
         <section className='app__container'>
           <div className='app__container__items'>
             {/* <button onClick={() => this.changeColor(colors)}>Click</button> */}
-            <Menu />
-            <Profile />
+            <div className='app__container__items__menu'>
+              <Menu />
+            </div>
+            <Profile className='app__profile' />
             <div className='app__container__items__cards'>
               {colors.map((e) => {
                 if (e === current)
