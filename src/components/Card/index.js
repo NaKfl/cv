@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { MENU_ITEM } from '../../containers/App/constants';
 import ContentAbout from './Content/About';
+import ContentSkills from './Content/Skills';
 import './styles.scss';
 
 class Card extends Component {
@@ -8,15 +9,17 @@ class Card extends Component {
     const { menu } = this.props;
     return (
       (menu === MENU_ITEM.ABOUT.value && (
-        <section className='card' style={{ backgroundColor: 'white' }}>
+        <section className='card'>
           <section className='card__content'>
             <ContentAbout />
           </section>
         </section>
       )) ||
-      (menu === MENU_ITEM.RESUME.value && (
-        <section className='card' style={{ backgroundColor: 'red' }}>
-          <section className='card__content'>2</section>
+      (menu === MENU_ITEM.SKILLS.value && (
+        <section className='card'>
+          <section className='card__content'>
+            <ContentSkills />
+          </section>
         </section>
       )) ||
       (menu === MENU_ITEM.WORKS.value && (

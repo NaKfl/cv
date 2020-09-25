@@ -1,6 +1,7 @@
 .square {
   position: relative;
   padding: 30px;
+  display: table-cell;
 
   &:after {
     content: '';
@@ -14,5 +15,11 @@
       #dddddd 0%,
       rgba(255, 255, 255, 0) 70%
     );
+  }
+}
+
+.end {
+  &:after {
+    content: none;
   }
 }
