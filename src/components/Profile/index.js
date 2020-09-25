@@ -40,14 +40,27 @@ class index extends Component {
             </div>
           </section>
           <section className='profile__buttons'>
-            <button className='profile__buttons__single profile__buttons__single--before'>
-              <span>DOWNLOAD CV</span>
-              <i className='fa fa-download'></i>
-            </button>
-            <button className='profile__buttons__single'>
-              <span>CONTACT ME</span>
-              <i className='fa fa-long-arrow-alt-right'></i>
-            </button>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://www.topcv.vn/xem-cv/c82e29e2ee2a244bdd06bfea23082e8b'
+            >
+              <button className='profile__buttons__single profile__buttons__single--before'>
+                <span>DOWNLOAD CV</span>
+                <i className='fa fa-download'></i>
+              </button>
+            </a>
+
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://www.linkedin.com/in/nguyen-huu-gia-tri-16225a1a1/'
+            >
+              <button className='profile__buttons__single'>
+                <span>CONTACT ME</span>
+                <i className='fa fa-long-arrow-alt-right'></i>
+              </button>
+            </a>
           </section>
         </section>
       </div>

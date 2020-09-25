@@ -83,6 +83,12 @@
     align-items: center;
     position: relative;
 
+    a {
+      display: inline-block;
+      width: 50%;
+      height: 100%;
+    }
+
     &__single--before {
       position: relative;
       &:before {
@@ -102,7 +108,7 @@
     }
 
     &__single {
-      width: 50%;
+      width: 100%;
       height: 70px;
       background-color: white;
       border: none;

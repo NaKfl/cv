@@ -10,6 +10,7 @@ export default class Menu extends Component {
     for (const [name, props] of Object.entries(menu)) {
       result.push(
         <li
+          key={props.value}
           className={classnames('menu__item', {
             menu__active: activeMenu === props.value,
           })}
