@@ -23,18 +23,18 @@ class Card extends Component {
         </section>
       )) ||
       (menu === MENU_ITEM.WORKS.value && (
-        <section className='card' style={{ backgroundColor: 'yellow' }}>
-          <section className='card__content'>3</section>
+        <section className='card'>
+          <section className='card__content'>WORKS</section>
         </section>
       )) ||
       (menu === MENU_ITEM.BLOGS.value && (
-        <section className='card' style={{ backgroundColor: 'pink' }}>
-          <section className='card__content'>4</section>
+        <section className='card'>
+          <section className='card__content'>BLOGS</section>
         </section>
       )) ||
       (menu === MENU_ITEM.CONTACT.value && (
-        <section className='card' style={{ backgroundColor: 'green' }}>
-          <section className='card__content'>5</section>
+        <section className='card'>
+          <section className='card__content'>CONTACT</section>
         </section>
       ))
     );
