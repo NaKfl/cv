@@ -18,9 +18,9 @@ export const PARTICLES_PARAM = {
 };
 
 export const MENU_ITEM = {
-  ABOUT: 0,
-  RESUME: 1,
-  WORKS: 2,
-  BLOGS: 3,
-  CONTACT: 4,
+  ABOUT: { value: 0, icon: 'fa fa-user' },
+  RESUME: { value: 1, icon: 'fa fa-list-alt' },
+  WORKS: { value: 2, icon: 'fa fa-paint-brush' },
+  BLOGS: { value: 3, icon: 'fa fa-comment-dots' },
+  CONTACT: { value: 4, icon: 'fa fa-at' },
 };

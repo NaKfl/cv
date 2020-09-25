@@ -6,27 +6,27 @@ class Card extends Component {
   render() {
     const { menu } = this.props;
     return (
-      (menu === MENU_ITEM.ABOUT && (
+      (menu === MENU_ITEM.ABOUT.value && (
         <section className='card' style={{ backgroundColor: 'black' }}>
           <section className='card__content'>1</section>
         </section>
       )) ||
-      (menu === MENU_ITEM.RESUME && (
+      (menu === MENU_ITEM.RESUME.value && (
         <section className='card' style={{ backgroundColor: 'red' }}>
           <section className='card__content'>2</section>
         </section>
       )) ||
-      (menu === MENU_ITEM.WORKS && (
+      (menu === MENU_ITEM.WORKS.value && (
         <section className='card' style={{ backgroundColor: 'yellow' }}>
           <section className='card__content'>3</section>
         </section>
       )) ||
-      (menu === MENU_ITEM.BLOGS && (
+      (menu === MENU_ITEM.BLOGS.value && (
         <section className='card' style={{ backgroundColor: 'pink' }}>
           <section className='card__content'>4</section>
         </section>
       )) ||
-      (menu === MENU_ITEM.CONTACT && (
+      (menu === MENU_ITEM.CONTACT.value && (
         <section className='card' style={{ backgroundColor: 'green' }}>
           <section className='card__content'>5</section>
         </section>

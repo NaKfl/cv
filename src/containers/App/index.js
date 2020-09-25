@@ -11,15 +11,15 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeMenu: MENU_ITEM.ABOUT,
+      activeMenu: MENU_ITEM.ABOUT.value,
     };
 
-    this.pages = Object.values(MENU_ITEM).map((page) => (style) => (
+    this.pages = Object.values(MENU_ITEM).map(({ value }) => (style) => (
       <animated.div
         className='app__container__items__cards__single'
         style={style}
       >
-        <Card menu={page} />
+        <Card menu={value} />
       </animated.div>
     ));
   }
