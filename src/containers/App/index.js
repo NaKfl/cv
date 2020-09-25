@@ -40,7 +40,10 @@ class App extends Component {
                 handleOnChangeMenu={this.handleOnChangeMenu}
               />
             </div>
-            <Profile />
+            <div className='app__container__items__profile'>
+              <Profile />
+            </div>
+
             <div className='app__container__items__cards'>
               <Transition
                 native

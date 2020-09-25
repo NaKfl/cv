@@ -7,8 +7,17 @@ class Title extends Component {
     const [firstWord, ...rest] = children.split(' ');
     return (
       <div className='title'>
-        <span>{firstWord}</span>
-        {' ' + rest.join(' ')}
+        {(rest.length > 0 && (
+          <div>
+            <span>{firstWord}</span>
+            {' ' + rest.join(' ')}
+          </div>
+        )) || (
+          <div>
+            <span>{firstWord[0]}</span>
+            {firstWord.slice(1)}
+          </div>
+        )}
       </div>
     );
   }

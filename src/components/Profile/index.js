@@ -12,7 +12,6 @@ class index extends Component {
               <div className='profile__info'>
                 <h4>Nguyen Huu Gia Tri</h4>
                 <span>Web developer</span>
-                <div className='profile__info__icon'></div>
               </div>
             </div>
             <div className='profile__icons'>
