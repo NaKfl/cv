@@ -117,6 +117,10 @@
       &:hover {
         color: rgb(8, 86, 193);
       }
+
+      &:focus {
+        outline: none;
+      }
     }
 
     &:before {

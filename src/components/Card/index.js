@@ -5,7 +5,6 @@ import './styles.scss';
 class Card extends Component {
   render() {
     const { menu } = this.props;
-
     return (
       (menu === MENU_ITEM.ABOUT && (
         <section className='card' style={{ backgroundColor: 'black' }}>

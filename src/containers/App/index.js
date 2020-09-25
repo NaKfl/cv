@@ -16,7 +16,7 @@ class App extends Component {
 
     this.pages = Object.values(MENU_ITEM).map((page) => (style) => (
       <animated.div
-        className='app__container__items__cards__card'
+        className='app__container__items__cards__single'
         style={style}
       >
         <Card menu={page} />
