@@ -16,14 +16,23 @@ class index extends Component {
               </div>
             </div>
             <div className='profile__icons'>
-              <a target='_blank' href='https://www.facebook.com/o0liebeo0o/'>
+              <a
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://www.facebook.com/o0liebeo0o/'
+              >
                 <i className='fab fa-facebook'></i>
               </a>
-              <a target='_blank' href='https://github.com/NaKfl'>
+              <a
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://github.com/NaKfl'
+              >
                 <i className='fab fa-github'></i>
               </a>
               <a
                 target='_blank'
+                rel='noopener noreferrer'
                 href='https://www.linkedin.com/in/nguyen-huu-gia-tri-16225a1a1/'
               >
                 <i className='fab fa-linkedin'></i>
