@@ -18,9 +18,9 @@ export const PARTICLES_PARAM = {
 };
 
 export const MENU_ITEM = {
-  ABOUT: 1,
-  RESUME: 2,
-  WORKS: 3,
-  BLOGS: 4,
-  CONTACT: 5,
+  ABOUT: 0,
+  RESUME: 1,
+  WORKS: 2,
+  BLOGS: 3,
+  CONTACT: 4,
 };

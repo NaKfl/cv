@@ -7,23 +7,21 @@ import Profile from '../../components/Profile';
 import { MENU_ITEM, PARTICLES_PARAM } from './constants';
 import './styles.scss';
 
-const pages = [
-  (style) => (
-    <animated.div style={{ ...style, background: '#b3FFBD' }}>A</animated.div>
-  ),
-  (style) => (
-    <animated.div style={{ ...style, background: '#B2DBBF' }}>B</animated.div>
-  ),
-  (style) => (
-    <animated.div style={{ ...style, background: '#12DBBF' }}>C</animated.div>
-  ),
-];
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       activeMenu: MENU_ITEM.ABOUT,
     };
+
+    this.pages = Object.values(MENU_ITEM).map((page) => (style) => (
+      <animated.div
+        className='app__container__items__cards__card'
+        style={style}
+      >
+        <Card menu={page} />
+      </animated.div>
+    ));
   }
 
   handleOnChangeMenu = (activeMenu) => {
@@ -43,26 +41,17 @@ class App extends Component {
               />
             </div>
             <Profile />
-            {/* <div className='app__container__items__card'>
-              <Card menu={activeMenu} />
-            </div> */}
-            <div style={{ width: 708, height: '100%' }}>
+            <div className='app__container__items__cards'>
               <Transition
                 native
                 unique
                 items={activeMenu}
-                from={{ opacity: 0, width: 0 }}
-                enter={{ opacity: 1, width: 700 }}
-                leave={{ display: 'none' }}
+                config={{ duration: 300 }}
+                from={{ opacity: 0, transform: 'translate3d(-50%,0,0)' }}
+                enter={{ opacity: 1, transform: 'translate3d(0%,0,0)' }}
+                leave={{ opacity: 0, transform: 'translate3d(-50%,0,0)' }}
               >
-                {(item) => (style) => (
-                  <animated.div
-                    className='app__container__items__card'
-                    style={style}
-                  >
-                    <Card menu={activeMenu} />
-                  </animated.div>
-                )}
+                {(menu) => this.pages[menu]}
               </Transition>
             </div>
           </div>
