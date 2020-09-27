@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { MENU_ITEM } from '../../containers/App/constants';
 import ContentAbout from './Content/About';
+import ContentEnd from './Content/End';
+import ContentProject from './Content/Project';
 import ContentSkills from './Content/Skills';
+import ContentWorks from './Content/Works';
 import './styles.scss';
 
 class Card extends Component {
@@ -24,17 +27,23 @@ class Card extends Component {
       )) ||
       (menu === MENU_ITEM.WORKS.value && (
         <section className='card'>
-          <section className='card__content'>WORKS</section>
+          <section className='card__content'>
+            <ContentWorks />
+          </section>
         </section>
       )) ||
-      (menu === MENU_ITEM.BLOGS.value && (
+      (menu === MENU_ITEM.PROJECT.value && (
         <section className='card'>
-          <section className='card__content'>BLOGS</section>
+          <section className='card__content'>
+            <ContentProject />
+          </section>
         </section>
       )) ||
-      (menu === MENU_ITEM.CONTACT.value && (
+      (menu === MENU_ITEM['THE END'].value && (
         <section className='card'>
-          <section className='card__content'>CONTACT</section>
+          <section className='card__content'>
+            <ContentEnd />
+          </section>
         </section>
       ))
     );
