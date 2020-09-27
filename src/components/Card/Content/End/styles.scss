@@ -1,0 +1,17 @@
+.end {
+  &__content {
+    color: #646464;
+    &__row {
+      display: table;
+      width: 100%;
+    }
+
+    &__thanks {
+      text-align: center;
+      img {
+        width: 350px;
+        height: 350px;
+      }
+    }
+  }
+}
