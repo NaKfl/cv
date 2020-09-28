@@ -12,7 +12,7 @@ class App extends Component {
     super(props);
     this.state = {
       // activeMenu: MENU_ITEM.ABOUT.value,
-      activeMenu: MENU_ITEM['THE END'].value,
+      activeMenu: MENU_ITEM.WORKS.value,
     };
 
     this.pages = Object.values(MENU_ITEM).map(({ value }) => (style) => (
