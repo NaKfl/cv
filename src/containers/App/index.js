@@ -11,8 +11,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // activeMenu: MENU_ITEM.ABOUT.value,
-      activeMenu: MENU_ITEM.WORKS.value,
+      activeMenu: MENU_ITEM.ABOUT.value,
     };
 
     this.pages = Object.values(MENU_ITEM).map(({ value }) => (style) => (

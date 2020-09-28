@@ -37,7 +37,7 @@ class ContentWorks extends Component {
                   &sdot; Study advanced subjects in web in particular and
                   software in general
                   <br />
-                  &sdot; Develop and deploy individual projects
+                  &sdot; Develop and deploy personal projects
                   <br />
                   &sdot; Improve English skills
                 </p>

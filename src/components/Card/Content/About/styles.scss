@@ -47,6 +47,7 @@
         position: relative;
 
         strong {
+          width: 30%;
           background: #0856c1;
           padding: 1px 8px;
           font-size: 14px;
@@ -55,6 +56,12 @@
           font-weight: 400;
           text-transform: none;
           border-radius: 2px;
+        }
+
+        span {
+          text-align: right;
+          width: 70%;
+          display: inline-block;
         }
 
         &:before {
