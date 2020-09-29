@@ -34,7 +34,6 @@ class App extends Component {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
     window.addEventListener('scroll', this.handleScroll);
-
     this.points = this.menuRefs.map((ref) => ref.current.offsetTop - 83);
   }
 
@@ -78,8 +77,12 @@ class App extends Component {
 
   render() {
     const { activeMenu, deviceWidth, deviceHeight } = this.state;
-    const padding = deviceHeight - 643;
-    console.log('deviceHeight', deviceHeight);
+    const lastCardHeight =
+      (this.menuRefs[this.menuRefs.length - 1].current &&
+        this.menuRefs[this.menuRefs.length - 1].current.clientHeight) ||
+      0;
+    const padding = deviceHeight - lastCardHeight - 35;
+
     return (
       <section className='app'>
         <section className='app__container'>
