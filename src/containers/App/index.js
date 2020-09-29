@@ -58,7 +58,7 @@ class App extends Component {
 
   scrollToMenu = (ref) =>
     window.scroll({
-      top: ref.current.offsetTop - 83,
+      top: ref.current.offsetTop - 82,
       // behavior: 'smooth',
     });
 

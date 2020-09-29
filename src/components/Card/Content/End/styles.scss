@@ -8,9 +8,14 @@
 
     &__thanks {
       text-align: center;
-      img {
-        width: 350px;
-        height: 350px;
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 350px;
+          height: 350px;
+        }
       }
     }
   }
