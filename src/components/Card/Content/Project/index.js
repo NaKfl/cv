@@ -58,6 +58,7 @@ class ContentProject extends Component {
     return projects.map((item, index, array) => {
       return (
         <div
+          key={index}
           className={classnames('project__content__timeline__single', {
             project__content__timeline__head: index === 0,
             project__content__timeline__tail: index === array.length - 1,

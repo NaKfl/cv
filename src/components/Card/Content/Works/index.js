@@ -30,6 +30,7 @@ class ContentWorks extends Component {
     return works.map((item, index, array) => {
       return (
         <div
+          key={index}
           className={classnames('works__content__timeline__single', {
             works__content__timeline__head: index === 0,
             works__content__timeline__tail: index === array.length - 1,
@@ -45,10 +46,10 @@ class ContentWorks extends Component {
               {item.experiences.map((experience, pos, arr) => {
                 return (
                   (pos !== arr.length - 1 && (
-                    <>
+                    <span key={pos}>
                       &sdot; {experience} <br />
-                    </>
-                  )) || <>&sdot; {experience}</>
+                    </span>
+                  )) || <span key={pos}>&sdot; {experience}</span>
                 );
               })}
             </p>
