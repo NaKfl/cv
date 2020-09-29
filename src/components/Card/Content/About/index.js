@@ -18,19 +18,19 @@ export default class ContentAbout extends Component {
             </div>
             <div className='about__content__row__col about__content__row__info'>
               <div>
-                <strong>DOB . . .</strong>
+                <strong>DOB</strong>
                 <span>12/06/1999</span>
               </div>
               <div>
-                <strong>Gender . . .</strong>
+                <strong>Gender</strong>
                 <span>Male</span>
               </div>
               <div>
-                <strong>Phone . . .</strong>
+                <strong>Phone</strong>
                 <span>0931467534</span>
               </div>
               <div>
-                <strong>Address . . .</strong>
+                <strong>Address</strong>
                 <span>District 8, HCM</span>
               </div>
             </div>
@@ -47,11 +47,11 @@ export default class ContentAbout extends Component {
             </div>
             <div className='about__content__row__col about__content__row__info'>
               <div>
-                <strong>Major . . .</strong>
+                <strong>Major</strong>
                 <span>Software Engineering</span>
               </div>
               <div>
-                <strong>GPA . . .</strong>
+                <strong>GPA</strong>
                 <span>8.4/10 (Now)</span>
               </div>
             </div>

@@ -12,7 +12,7 @@
     background-image: url('./../../assets/avatar.jpg');
     background-position: center -20px;
     background-size: cover;
-    width: 480px;
+    background-repeat: no-repeat;
     height: 420px;
     position: relative;
     overflow: hidden;
@@ -159,5 +159,36 @@
       rgba(8, 86, 193, 0.01) 100%
     );
     border-radius: 4px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .profile {
+    &__avatar {
+      background-position: center 0px;
+      &:after,
+      &:before {
+        width: 58%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .profile {
+    &__info {
+      h4 {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .profile {
+    box-shadow: none;
+    &:after {
+      content: none;
+    }
   }
 }

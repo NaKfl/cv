@@ -97,3 +97,24 @@
     }
   }
 }
+
+@media screen and (max-width: 1250px) {
+  .about__content__row__university {
+    &__name {
+      &:before {
+        content: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .about__content__row__university {
+    &__name {
+      &:before {
+        top: -10px;
+        left: -25px;
+      }
+    }
+  }
+}

@@ -34,14 +34,16 @@ class App extends Component {
       <section className='app'>
         <section className='app__container'>
           <div className='app__container__items'>
-            <div className='app__container__items__menu'>
-              <Menu
-                activeMenu={activeMenu}
-                handleOnChangeMenu={this.handleOnChangeMenu}
-              />
-            </div>
-            <div className='app__container__items__profile'>
-              <Profile />
+            <div style={{ display: 'flex' }}>
+              <div className='app__container__items__menu'>
+                <Menu
+                  activeMenu={activeMenu}
+                  handleOnChangeMenu={this.handleOnChangeMenu}
+                />
+              </div>
+              <div className='app__container__items__profile'>
+                <Profile />
+              </div>
             </div>
 
             <div className='app__container__items__cards'>

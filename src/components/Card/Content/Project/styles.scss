@@ -136,12 +136,24 @@
       left: 40px;
       top: 45px;
       width: 1.5px;
-      height: 100%;
+      height: calc(100% - 45px);
       background: radial-gradient(
         ellipse at top,
         #dddddd 0%,
         rgba(255, 255, 255, 0) 70%
       );
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .project__content__timeline__single {
+    &__info {
+      &__detail {
+        &__single {
+          padding: 11px 0 11px 40px;
+        }
+      }
     }
   }
 }

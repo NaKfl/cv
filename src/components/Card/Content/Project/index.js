@@ -70,15 +70,15 @@ class ContentProject extends Component {
             </div>
             <div className='project__content__timeline__single__info__detail'>
               <div className='project__content__timeline__single__info__detail__single'>
-                <strong>Description . . .</strong>
+                <strong>Descrip</strong>
                 <span>{item.description}</span>
               </div>
               <div className='project__content__timeline__single__info__detail__single'>
-                <strong>Team size . . .</strong>
+                <strong>Team size</strong>
                 <span>{`${item.size} member${item.size > 1 ? 's' : ''}`}</span>
               </div>
               <div className='project__content__timeline__single__info__detail__single'>
-                <strong>Tech stack . . .</strong>
+                <strong>Tech stack</strong>
                 <span>{item.stack}</span>
               </div>
               <div className='project__content__timeline__single__info__detail__single project__content__timeline__single__info__detail__link'>
