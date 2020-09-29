@@ -192,3 +192,22 @@
     }
   }
 }
+
+@media screen and (max-width: 520px) {
+  .profile {
+    &__info {
+      h4 {
+        font-size: 27px;
+      }
+    }
+
+    &__buttons {
+      &__single {
+        span,
+        i {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

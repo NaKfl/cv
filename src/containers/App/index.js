@@ -13,6 +13,7 @@ class App extends Component {
     this.state = {
       activeMenu: MENU_ITEM.ABOUT.value,
       deviceWidth: 0,
+      deviceHeight: 0,
     };
 
     this.pages = Object.values(MENU_ITEM).map(({ value }) => (style) => (
@@ -43,7 +44,10 @@ class App extends Component {
   }
 
   updateWindowDimensions = () => {
-    this.setState({ deviceWidth: window.innerWidth });
+    this.setState({
+      deviceWidth: window.innerWidth,
+      deviceHeight: window.innerHeight,
+    });
   };
 
   handleOnChangeMenu = (activeMenu) => {
@@ -62,7 +66,6 @@ class App extends Component {
   handleScroll = () => {
     const points = [...this.points, Infinity];
     const { activeMenu } = this.state;
-    console.log('points', points);
     for (let i = 0; i < points.length; i++) {
       if (
         window.scrollY >= points[i] &&
@@ -74,11 +77,16 @@ class App extends Component {
   };
 
   render() {
-    const { activeMenu, deviceWidth } = this.state;
+    const { activeMenu, deviceWidth, deviceHeight } = this.state;
+    const padding = deviceHeight - 643;
+    console.log('deviceHeight', deviceHeight);
     return (
       <section className='app'>
         <section className='app__container'>
-          <div className='app__container__items'>
+          <div
+            className='app__container__items'
+            style={deviceWidth > 1024 ? {} : { paddingBottom: padding }}
+          >
             <div className='app__container__items__flex'>
               <div className='app__container__items__menu'>
                 <Menu
@@ -93,7 +101,7 @@ class App extends Component {
             </div>
 
             <div className='app__container__items__cards'>
-              {(deviceWidth >= 1024 && (
+              {(deviceWidth > 1024 && (
                 <Transition
                   native
                   unique

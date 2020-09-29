@@ -157,3 +157,71 @@
     }
   }
 }
+
+@media screen and (max-width: 520px) {
+  .project {
+    &__content {
+      padding-left: 0;
+      padding-right: 0;
+      position: relative;
+
+      &__timeline {
+        &__single {
+          &__info {
+            div:first-child {
+              display: flex;
+              align-items: center;
+            }
+            div {
+              h4 {
+                font-size: 16px;
+                margin: 0 0 0 10px;
+              }
+            }
+            &__detail {
+              &__single {
+                padding-left: 20px;
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+      &:after {
+        left: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .project {
+    &__content {
+      &__timeline {
+        &__single {
+          &__info {
+            div {
+              h4 {
+                font-size: 15px;
+                word-wrap: break-word;
+                margin: 0 0 0 10px;
+              }
+            }
+            &__detail {
+              &__single {
+                padding-left: 20px;
+                font-size: 14.5px;
+                strong {
+                  width: 23%;
+                }
+                span {
+                  width: 77%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

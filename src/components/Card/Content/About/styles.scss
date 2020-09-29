@@ -98,6 +98,17 @@
   }
 }
 
+@media screen and (max-width: 1439px) {
+  .about__content__row__university {
+    &__name {
+      &:before {
+        top: -10px;
+        left: -25px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1250px) {
   .about__content__row__university {
     &__name {
@@ -108,12 +119,46 @@
   }
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 765px) {
+  .about__content {
+    &:after {
+      content: none;
+    }
+    &__row {
+      display: flex;
+      flex-direction: column;
+      &__col {
+        display: block;
+        width: unset;
+        padding-bottom: 0;
+      }
+
+      &__info {
+        padding-bottom: 30px;
+      }
+      &__university {
+        &__name {
+          &:before {
+            content: '';
+            top: -15px;
+            left: 35px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .about__content__row__col {
+    font-size: 15px;
+  }
   .about__content__row__university {
     &__name {
+      height: unset;
+      transform: unset;
       &:before {
-        top: -10px;
-        left: -25px;
+        display: none;
       }
     }
   }
