@@ -13,7 +13,7 @@ body {
   background: linear-gradient(to bottom right, #48b1bf 0%, #0856c1 100%);
 
   &__background {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     width: 100%;
@@ -33,7 +33,9 @@ body {
     &__items {
       display: flex;
       height: 674px;
-
+      &__flex {
+        display: flex;
+      }
       &__menu {
         margin-right: 8px;
         transform: translateY(15px);
@@ -125,7 +127,6 @@ body {
       padding: 20px 0;
       &__items {
         flex-direction: column;
-        align-items: flex-end;
         height: unset;
         &__menu {
           transform: none;
@@ -142,8 +143,65 @@ body {
           position: unset;
           &__single {
             position: unset;
-            margin: 15px 0;
+            margin-top: 15px;
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .app {
+    &__container {
+      padding-top: 0;
+      &__items {
+        &__flex {
+          flex-direction: column;
+          align-items: center;
+        }
+        &__menu {
+          position: fixed;
+          margin: 0;
+          width: 100vw;
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+        }
+        &__profile {
+          width: 485px;
+          margin-top: 68px;
+        }
+        &__cards {
+          width: 485px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .app {
+    &__container {
+      &__items {
+        &__profile {
+          width: 340px;
+        }
+        &__cards {
+          width: 340px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .app {
+    &__container {
+      &__items {
+        &__profile {
+          width: 300px;
+        }
+        &__cards {
+          width: 300px;
         }
       }
     }

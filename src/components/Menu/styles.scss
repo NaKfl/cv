@@ -58,3 +58,33 @@
     }
   }
 }
+
+@media screen and (max-width: 765px) {
+  .menu {
+    ul {
+      display: flex;
+      width: 100%;
+      li {
+        padding: 13px 7px;
+        width: calc(100% / 5);
+        &:before {
+          content: none;
+        }
+        &:after {
+          width: 1px;
+          height: 100%;
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: auto;
+          background: radial-gradient(
+            ellipse at top,
+            #dddddd 0%,
+            rgba(255, 255, 255, 0) 70%
+          );
+        }
+      }
+    }
+  }
+}

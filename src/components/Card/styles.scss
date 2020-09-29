@@ -27,8 +27,7 @@
 @media screen and (max-width: 1024px) {
   .card {
     height: 100%;
-    &__content {
-    }
+    border-radius: 4px;
     &:after {
       content: none;
     }
