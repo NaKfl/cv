@@ -28,7 +28,7 @@ export default class Menu extends Component {
     return (
       <div>
         <section className='menu'>
-          <ul>{this.renderMenu(MENU_ITEM, this.props)}</ul>
+          <ul>{this.renderMenu(MENU_ITEM)}</ul>
         </section>
       </div>
     );

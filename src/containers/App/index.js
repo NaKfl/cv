@@ -23,15 +23,23 @@ class App extends Component {
         <Card menu={value} />
       </animated.div>
     ));
+
+    this.menuRefs = Array.from(Array(Object.keys(MENU_ITEM).length), (_) =>
+      React.createRef()
+    );
   }
 
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
+    window.addEventListener('scroll', this.handleScroll);
+
+    this.points = this.menuRefs.map((ref) => ref.current.offsetTop - 83);
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateWindowDimensions);
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   updateWindowDimensions = () => {
@@ -40,6 +48,29 @@ class App extends Component {
 
   handleOnChangeMenu = (activeMenu) => {
     this.setState({ activeMenu });
+    if (this.menuRefs[activeMenu].current) {
+      this.scrollToMenu(this.menuRefs[activeMenu]);
+    }
+  };
+
+  scrollToMenu = (ref) =>
+    window.scrollTo({
+      top: ref.current.offsetTop - 83,
+      behavior: 'smooth',
+    });
+
+  handleScroll = () => {
+    const points = [...this.points, Infinity];
+    const { activeMenu } = this.state;
+    console.log('points', points);
+    for (let i = 0; i < points.length; i++) {
+      if (
+        window.scrollY >= points[i] &&
+        window.scrollY <= points[i + 1] &&
+        i !== activeMenu
+      )
+        this.setState({ activeMenu: i });
+    }
   };
 
   render() {
@@ -53,6 +84,7 @@ class App extends Component {
                 <Menu
                   activeMenu={activeMenu}
                   handleOnChangeMenu={this.handleOnChangeMenu}
+                  scrollToMenu={this.scrollToMenu}
                 />
               </div>
               <div className='app__container__items__profile'>
@@ -75,7 +107,11 @@ class App extends Component {
                 </Transition>
               )) ||
                 Object.values(MENU_ITEM).map(({ value }) => (
-                  <div className='app__container__items__cards__single'>
+                  <div
+                    key={value}
+                    ref={this.menuRefs[value]}
+                    className='app__container__items__cards__single'
+                  >
                     <Card menu={value} />
                   </div>
                 ))}
