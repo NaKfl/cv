@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import { animated, Transition } from 'react-spring/renderprops';
+import 'scroll-behavior-polyfill';
 import Card from '../../components/Card';
 import Menu from '../../components/Menu';
 import Profile from '../../components/Profile';
@@ -59,7 +60,7 @@ class App extends Component {
   scrollToMenu = (ref) =>
     window.scroll({
       top: ref.current.offsetTop - 82,
-      // behavior: 'smooth',
+      behavior: 'smooth',
     });
 
   handleScroll = () => {
