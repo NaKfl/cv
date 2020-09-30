@@ -14,7 +14,7 @@ export default class ContentAbout extends Component {
               Information of Technology at the University of Science HCM. I am
               seeking a WEB DEVELOPER INTERN/FRESHER position to learn more
               practical experiences and begin my career in a high-level
-              professional environment.
+              professional environment
             </div>
             <div className='about__content__row__col about__content__row__info'>
               <div>

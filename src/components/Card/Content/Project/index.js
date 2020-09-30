@@ -14,7 +14,7 @@ const projects = [
   },
   {
     name: 'NGUYEN HUU GIA TRI WEBSITE',
-    description: 'Responsive personal website',
+    description: 'A small React project to introduce myself ^^',
     size: 1,
     stack: 'ReactJS, HTML, SCSS',
     link: 'https://github.com/NaKfl/personal-website',
@@ -30,7 +30,7 @@ const projects = [
   },
   {
     name: 'WEB APP ONLINE AUCTION',
-    description: 'ReactJS, ExpressJS, MySQL',
+    description: 'Web app which can auction online for bidder and seller',
     size: 3,
     stack:
       'ReactJS, ExpressJS, Parse, React Admin, Material-UI, Semantic-UI, etc',
@@ -45,10 +45,10 @@ const projects = [
     link: 'https://github.com/NaKfl/android-travel-app',
   },
   {
-    name: 'UDEMY CLONE LAYOUT',
+    name: 'UDEMY CLONE',
     description: 'Responsive layout base on Udemy',
     size: 1,
-    stack: 'HTML, SASS, Bootstrap4, Javascipt',
+    stack: 'HTML, SASS, Bootstrap4, Javascript',
     link: 'https://github.com/NaKfl/reponsive-layout-udemy-with-sass',
   },
 ];

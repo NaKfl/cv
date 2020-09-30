@@ -47,9 +47,9 @@ class ContentWorks extends Component {
                 return (
                   (pos !== arr.length - 1 && (
                     <span key={pos}>
-                      &sdot; {experience} <br />
+                      {`• ${experience}`} <br />
                     </span>
-                  )) || <span key={pos}>&sdot; {experience}</span>
+                  )) || <span key={pos}>{`• ${experience}`}</span>
                 );
               })}
             </p>
