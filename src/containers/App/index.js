@@ -32,10 +32,10 @@ class App extends Component {
   }
 
   componentDidMount() {
+    this.points = this.menuRefs.map((ref) => ref.current.offsetTop - 83);
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
     window.addEventListener('scroll', this.handleScroll);
-    this.points = this.menuRefs.map((ref) => ref.current.offsetTop - 83);
   }
 
   componentWillUnmount() {
@@ -64,14 +64,9 @@ class App extends Component {
     });
 
   handleScroll = () => {
-    const points = [...this.points, Infinity];
-    const { activeMenu } = this.state;
+    const points = [0, ...this.points.slice(1), Infinity];
     for (let i = 0; i < points.length; i++) {
-      if (
-        window.scrollY >= points[i] &&
-        window.scrollY <= points[i + 1] &&
-        i !== activeMenu
-      )
+      if (window.scrollY >= points[i] && window.scrollY < points[i + 1])
         this.setState({ activeMenu: i });
     }
   };
@@ -96,7 +91,6 @@ class App extends Component {
                 <Menu
                   activeMenu={activeMenu}
                   handleOnChangeMenu={this.handleOnChangeMenu}
-                  scrollToMenu={this.scrollToMenu}
                 />
               </div>
               <div className='app__container__items__profile'>
