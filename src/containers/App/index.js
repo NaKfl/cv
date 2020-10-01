@@ -32,7 +32,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.points = this.menuRefs.map((ref) => ref.current.offsetTop - 83);
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
     window.addEventListener('scroll', this.handleScroll);
@@ -44,10 +43,15 @@ class App extends Component {
   }
 
   updateWindowDimensions = () => {
-    this.setState({
-      deviceWidth: window.innerWidth,
-      deviceHeight: window.innerHeight,
-    });
+    this.setState(
+      {
+        deviceWidth: window.innerWidth,
+        deviceHeight: window.innerHeight,
+      },
+      () => {
+        this.handleScroll();
+      }
+    );
   };
 
   handleOnChangeMenu = (activeMenu) => {
@@ -64,10 +68,17 @@ class App extends Component {
     });
 
   handleScroll = () => {
-    const points = [0, ...this.points.slice(1), Infinity];
-    for (let i = 0; i < points.length; i++) {
-      if (window.scrollY >= points[i] && window.scrollY < points[i + 1])
-        this.setState({ activeMenu: i });
+    if (this.menuRefs[0] && this.menuRefs[0].current) {
+      let points = this.menuRefs.map((ref) => ref.current.offsetTop - 83);
+      points = [0, ...points.slice(1), Infinity];
+      for (let i = 0; i < points.length; i++) {
+        if (
+          window.scrollY >= points[i] &&
+          window.scrollY < points[i + 1] &&
+          this.state.activeMenu !== i
+        )
+          this.setState({ activeMenu: i });
+      }
     }
   };
 
