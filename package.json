@@ -1,6 +1,6 @@
 {
-  "homepage": "http://nakfl.github.io/personal-website",
-  "name": "personal-website",
+  "homepage": "http://nakfl.github.io/cv",
+  "name": "cv",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

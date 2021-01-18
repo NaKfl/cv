@@ -50,8 +50,8 @@ export default class ContentSkills extends Component {
               <p>Ant Design</p>
             </Square>
             <Square end>
-              <i className='devicon-bootstrap-plain colored'></i>
-              <p>Bootstrap</p>
+              <i class='devicon-docker-plain colored'></i>
+              <p>Docker</p>
             </Square>
           </div>
         </div>

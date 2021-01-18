@@ -15,12 +15,12 @@ const works = [
     ],
   },
   {
-    time: '03/2020 - Now',
-    company: 'University of Science',
-    position: 'Senior student',
+    time: '09/2020 - 01/2021',
+    company: 'KMS Technologies',
+    position: 'Software Engineer Intern',
     experiences: [
       'Study advanced subjects in web in particular and software in general',
-      'Develop and deploy personal projects',
+      'More about deployment (CI-CD, Docker)',
       'Improve English skills',
     ],
   },

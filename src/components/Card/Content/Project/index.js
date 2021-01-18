@@ -17,7 +17,7 @@ const projects = [
     description: 'A small React project to introduce myself ^^',
     size: 1,
     stack: 'ReactJS, HTML, SCSS',
-    link: 'https://github.com/NaKfl/personal-website',
+    link: 'https://nakfl.github.io/cv/',
   },
   {
     name: 'WEB APP EKUIPP',
