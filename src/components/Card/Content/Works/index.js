@@ -4,23 +4,25 @@ import Title from '../../../Title';
 import './styles.scss';
 
 const works = [
-  {
-    time: '11/2019 - 03/2020',
-    company: 'Hybrid Technologies',
-    position: 'Javascript Intern',
-    experiences: [
-      'Participate in software development activities following Scrum process',
-      'Implement software features or fix bugs',
-      'Write unit tests and documents',
-    ],
-  },
+  // {
+  //   time: '11/2019 - 03/2020',
+  //   company: 'Hybrid Technologies',
+  //   position: 'Javascript Intern',
+  //   experiences: [
+  //     'Participate in software development activities following Scrum process',
+  //     'Implement software features or fix bugs',
+  //     'Write unit tests and documents',
+  //   ],
+  // },
   {
     time: '09/2020 - 01/2021',
     company: 'KMS Technologies',
     position: 'Software Engineer Intern',
     experiences: [
-      'Study advanced subjects in web in particular and software in general',
-      'More about deployment (CI-CD, Docker)',
+      'Participate in software development activities following Scrum process',
+      'Implement software features and fix bugs ',
+      'Write unit tests and documents',
+      'Improve communication skills',
       'Improve English skills',
     ],
   },

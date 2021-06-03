@@ -42,7 +42,7 @@ class index extends Component {
             <a
               target='_blank'
               rel='noopener noreferrer'
-              href='https://www.topcv.vn/xem-cv/c82e29e2ee2a244bdd06bfea23082e8b'
+              href='https://www.topcv.vn/xem-cv/BgpWUFYPVwoAVwZYA1UAAVRdUwMEB1YDAwcJDg2e8b'
             >
               <button className='profile__buttons__single profile__buttons__single--before'>
                 <span>DOWNLOAD CV</span>

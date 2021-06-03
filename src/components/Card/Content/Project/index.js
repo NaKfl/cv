@@ -1,55 +1,44 @@
-import classnames from 'classnames';
-import React, { Component } from 'react';
-import Title from '../../../Title';
-import './styles.scss';
+import classnames from "classnames";
+import React, { Component } from "react";
+import Title from "../../../Title";
+import "./styles.scss";
 
 const projects = [
   {
-    name: 'WEB APP HOTEL MANAGEMENT',
-    description:
-      'Web app online that hotel owners and managers can use to manage the operational and financial functions of their hotel',
-    size: 3,
-    stack: 'ReactJS, ExpressJS, MySQL, AntDesign',
-    link: 'https://github.com/NaKfl/web-quan-ly-khach-san',
-  },
-  {
-    name: 'NGUYEN HUU GIA TRI WEBSITE',
-    description: 'A small React project to introduce myself ^^',
-    size: 1,
-    stack: 'ReactJS, HTML, SCSS',
-    link: 'https://nakfl.github.io/cv/',
-  },
-  {
-    name: 'WEB APP EKUIPP',
-    description:
-      'Web app which can sell and buy second-hand equipment (Hybrid Technologies Company)',
-    size: 3,
+    name: "LIVE TUTOR",
+    role: "Team leader - Breaking tasks, doing FE, BE, DevOps tasks",
+    description: "A web app that connects tutors and students by video streaming",
+    size: 6,
     stack:
-      'ReactJS, ExpressJS, Parse, React Admin, Material-UI, Semantic-UI, etc',
-    link: 'https://ekuipp.com/',
+      "ReactJS, ExpressJS, Socket.io, Styled-component, Redux toolkit, Saga, Docker, Jitsi, etc",
+    link: "https://livetutor.live/",
   },
   {
-    name: 'WEB APP ONLINE AUCTION',
-    description: 'Web app which can auction online for bidder and seller',
-    size: 3,
-    stack:
-      'ReactJS, ExpressJS, Parse, React Admin, Material-UI, Semantic-UI, etc',
-    link: 'https://github.com/NaKfl/nodejs-express-online-auction',
-  },
-  {
-    name: 'ANDROID APP TOUR-TRAVEL',
+    name: "NETLOVE CMS",
+    role: "Team member - Doing FE tasks",
     description:
-      "Android app which can create, join tour and track member's location",
-    size: 3,
-    stack: 'Android (Java)',
-    link: 'https://github.com/NaKfl/android-travel-app',
+      "A web app that the admin can add, remove or update the content showing in the mobile application (KMS Technologies)",
+    size: 10,
+    stack: "ReactJS, Styled-component, Redux toolkit, Saga, etc",
+    link: "http://netlove.com/",
   },
   {
-    name: 'UDEMY CLONE',
-    description: 'Responsive layout base on Udemy',
+    name: "NGUYEN HUU GIA TRI WEBSITE",
+    role: "Owner",
+    description:
+      "A beautiful website (only FE) using react to introduce myself ^^",
     size: 1,
-    stack: 'HTML, SASS, Bootstrap4, Javascript',
-    link: 'https://github.com/NaKfl/reponsive-layout-udemy-with-sass',
+    stack: "ReactJS, HTML, CSS, Spring.io",
+    link: "https://nakfl.github.io/cv/",
+  },
+  {
+    name: "WEB APP HOTEL MANAGEMENT",
+    role: "Team leader - Breaking tasks, doing both FE and BE tasks",
+    description:
+      "A web app online that hotel owners and managers can use to manage the operational and financial functions of their hotel",
+    size: 3,
+    stack: "ReactJS, ExpressJS, MySQL, AntDesign",
+    link: "https://github.com/NaKfl/web-quan-ly-khach-san",
   },
 ];
 
@@ -59,34 +48,38 @@ class ContentProject extends Component {
       return (
         <div
           key={index}
-          className={classnames('project__content__timeline__single', {
+          className={classnames("project__content__timeline__single", {
             project__content__timeline__head: index === 0,
             project__content__timeline__tail: index === array.length - 1,
           })}
         >
-          <div className='project__content__timeline__single__info'>
+          <div className="project__content__timeline__single__info">
             <div>
-              <i className='fa fa-code'></i>
+              <i className="fa fa-code"></i>
               <h4>{item.name}</h4>
             </div>
-            <div className='project__content__timeline__single__info__detail'>
-              <div className='project__content__timeline__single__info__detail__single'>
+            <div className="project__content__timeline__single__info__detail">
+              <div className="project__content__timeline__single__info__detail__single">
+                <strong>Role</strong>
+                <span>{item.role}</span>
+              </div>
+              <div className="project__content__timeline__single__info__detail__single">
                 <strong>Descrip</strong>
                 <span>{item.description}</span>
               </div>
-              <div className='project__content__timeline__single__info__detail__single'>
+              <div className="project__content__timeline__single__info__detail__single">
                 <strong>Team size</strong>
-                <span>{`${item.size} member${item.size > 1 ? 's' : ''}`}</span>
+                <span>{`${item.size} member${item.size > 1 ? "s" : ""}`}</span>
               </div>
-              <div className='project__content__timeline__single__info__detail__single'>
+              <div className="project__content__timeline__single__info__detail__single">
                 <strong>Tech stack</strong>
                 <span>{item.stack}</span>
               </div>
-              <div className='project__content__timeline__single__info__detail__single project__content__timeline__single__info__detail__link'>
+              <div className="project__content__timeline__single__info__detail__single project__content__timeline__single__info__detail__link">
                 <strong>
-                  <a target='_blank' rel='noopener noreferrer' href={item.link}>
+                  <a target="_blank" rel="noopener noreferrer" href={item.link}>
                     Go to Github
-                    <i className='fa fa-long-arrow-alt-right'></i>
+                    <i className="fa fa-long-arrow-alt-right"></i>
                   </a>
                 </strong>
               </div>
@@ -99,10 +92,10 @@ class ContentProject extends Component {
 
   render() {
     return (
-      <div className='project'>
+      <div className="project">
         <Title>Projects</Title>
-        <div className='project__content'>
-          <div className='project__content__timeline'>
+        <div className="project__content">
+          <div className="project__content__timeline">
             {this.renderList(projects)}
           </div>
         </div>
