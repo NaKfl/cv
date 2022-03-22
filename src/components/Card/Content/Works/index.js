@@ -26,6 +26,12 @@ const works = [
       'Improve English skills',
     ],
   },
+  {
+    time: '07/2021 - Now',
+    company: 'TIKI Corporation',
+    position: 'Software Engineer',
+    experiences: ['Build Tini framework - Mini app platform'],
+  },
 ];
 class ContentWorks extends Component {
   renderList = (works) => {
